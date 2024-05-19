@@ -1,0 +1,129 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+body {
+    background-image: url("../imagenes/tiles-shapes-2617112_1920.jpg");
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    justify-content: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+.container {
+    position: relative;
+    max-width: 700px;
+    width: 100%;
+    background: #000000; /*Fondo transparente del contenedor*/
+    padding: 25px;
+    border-radius: 17px;
+    box-shadow: 0 0 15px rgb(253, 252, 252); /*Sombra del contenedor*/
+}
+
+.container header {
+    font-size: 1.5rem;
+    color: #fff; /*Encabezado*/
+    font-size: 30px;
+    font-weight: 500;
+    text-align: center;
+}
+
+.container .form {
+    margin-top: 30px;
+}
+
+.form .input-box {
+    width: 100%;
+    margin-top: 20px;
+}
+
+.input-box label {
+    color: #080808; /*Titulos principales*/
+    font-size: small;
+}
+
+select {
+    color: #080808; /*Titulos principales*/
+    font-weight: bold;
+    font-size: small;
+}
+
+.form :where(.input-box input, .select-box) { /*Input txt, cajas trasparentes...*/
+    position: relative;
+    height: 50px;
+    width: 100%;
+    outline: none;
+    color: #fff;
+    margin-top: 10px;
+    border: none; /*borde de las cajas*/
+    border-radius: 30px;
+    padding:  0 15px;
+    background: rgba(255, 255, 255, 0.205); /*Color o transparencia de las cajas*/
+}
+
+::-webkit-input-placeholder { /*Texto de las cajas*/
+    color: #fff;
+}
+
+.input-box input:focus {
+    box-shadow: 0 1px 0 rgba(240, 2, 2, 0.1);
+}
+
+.form .column {
+    display: flex;
+    column-gap: 15px;
+}
+
+.address :where(input, .select-box) {
+    margin-top: 15px;
+}
+
+.select-box select { /*Pais*/
+    height: 100%;
+    width: 100%;
+    outline: none;
+    border: none;
+    color: #fff;
+    font-size: small;
+    background: rgba(255, 255, 255, 0.205);
+}
+
+.select-box select option { /*Listado de paises*/
+    color: black;
+    background: rgba(255, 255, 255, 0.205);
+}
+
+.form button { /*Boton registrarse*/
+    border: none;
+    height: 55px;
+    width: 100%;
+    color: #000000;
+    font-size: 15px;
+    font-weight: 400;
+    margin-top: 30px;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: .3s;
+    background: rgba(255,255,255,0.7);
+}
+
+.form button:hover { /*Cursor sombreado registrarse*/
+    box-shadow: 1px 5px 7px 1px rgba(255, 254, 254, 0.2);
+}
+
+@media screen and (max-width: 500px) {
+    .form .column {
+        flex-wrap: wrap;
+    }
+    .form :where(.gender-option, .gender) {
+        row-gap: 15px;
+    }
+}
